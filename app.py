@@ -233,4 +233,6 @@ def admin_dashboard():
 
 if __name__ == '__main__':
     init_db()
-    app.run(debug=True, host='127.0.0.1', port=8000)
+import os            
+app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 8000)))
+
